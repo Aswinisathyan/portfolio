@@ -43,7 +43,7 @@ export default function Hero() {
 
           {/* Resume Button */}
           <a
-            href="/Resume_AI_Eng.pdf"
+            href="/portfolio/Resume_AI_Eng.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline"

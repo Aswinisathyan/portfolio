@@ -1,5 +1,8 @@
-# Portfolio
+<!-- ========================= -->
+<!--        PORTFOLIO README   -->
+<!-- ========================= -->
 
+<<<<<<< HEAD
 Portfolio Website is a modern personal portfolio designed to showcase my skills, projects, and achievements. It provides a clean, professional interface for recruiters and visitors to explore my profile, view my work, and contact me easily.
 
 ---
@@ -52,3 +55,60 @@ Portfolio Website is a modern personal portfolio designed to showcase my skills,
 - Portfolio Website
 - Web Hosting (GitHub Pages)
 
+=======
+# 🌐 Portfolio Website
+
+![React](https://img.shields.io/badge/React-19+-61DAFB?logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-7+-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3+-38B2AC?logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-Animations-black?logo=framer&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Live-success)
+
+A modern, responsive **personal portfolio website** to showcase my skills, projects, and contact details. Built with **React + Vite**, styled with **Tailwind CSS**, and enhanced with **Framer Motion animations**.
+
+---
+
+## 🚀 Live Demo
+
+🔗 **Website:** https://aswinisathyan.github.io/portfolio/
+
+---
+
+## 📌 Table of Contents
+
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Build & Deployment](#-build--deployment)
+- [Resume](#-resume)
+- [Troubleshooting](#-troubleshooting)
+- [Contact](#-contact)
+- [License](#-license)
+
+---
+
+## ✨ Features
+
+- ✅ Fully responsive design (Mobile / Tablet / Desktop)
+- ✅ Smooth animations using **Framer Motion**
+- ✅ Clean component-based structure
+- ✅ Projects section to highlight work
+- ✅ Skills, Education, About sections
+- ✅ Contact section
+- ✅ Resume download support
+
+---
+
+## 🧰 Tech Stack
+
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Hosting:** GitHub Pages
+
+---
+
+## 🗂 Project Structure
+>>>>>>> 78e93c5 (Update deploy setup for GitHub Pages)

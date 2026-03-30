@@ -16,7 +16,7 @@ export default function Hero() {
           Hello, I'm
         </p>
 
-        {/* Name with subtle gradient shimmer */}
+        {/* Name */}
         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-up delay-200">
           <span className="text-white">Aswini </span>
           <span className="bg-gradient-to-r from-cyan-400 to-sky-500 bg-clip-text text-transparent animate-gradient">
@@ -32,12 +32,25 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-5 animate-fade-up delay-600">
+          
           <a href="#contact" className="btn-primary">
             Get in Touch
           </a>
+
           <a href="#projects" className="btn-outline">
             View Projects
           </a>
+
+          {/* Resume Button */}
+          <a
+            href="/Resume_AI_Eng.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            AI Engineer Resume
+          </a>
+
         </div>
 
         {/* Down Arrow */}

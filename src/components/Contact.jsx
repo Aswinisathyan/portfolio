@@ -8,6 +8,7 @@ import {
   Send,
   Download,
 } from "lucide-react";
+import { PROFILE, RESUME_FILE } from "../data/content";
 
 /* Animation variants */
 const container = {
@@ -70,7 +71,7 @@ export default function Contact() {
           variants={fadeUp}
           whileHover={{ y: -6 }}
           whileTap={{ scale: 0.98 }}
-          href="mailto:sreeaswini3@gmail.com"
+          href={`mailto:${PROFILE.email}`}
           className="glass-card p-6 text-center hover:border-primary/40 transition-all"
         >
           <motion.div
@@ -80,7 +81,7 @@ export default function Contact() {
             <Mail size={20} />
           </motion.div>
           <h3 className="font-semibold mb-1">Email</h3>
-          <p className="text-sm text-muted">sreeaswini3@gmail.com</p>
+          <p className="text-sm text-muted">{PROFILE.email}</p>
         </motion.a>
 
         {/* Phone */}
@@ -88,7 +89,7 @@ export default function Contact() {
           variants={fadeUp}
           whileHover={{ y: -6 }}
           whileTap={{ scale: 0.98 }}
-          href="tel:+918590464943"
+          href={`tel:${PROFILE.phone.replace(/\s+/g, "")}`}
           className="glass-card p-6 text-center hover:border-primary/40 transition-all"
         >
           <motion.div
@@ -98,7 +99,7 @@ export default function Contact() {
             <Phone size={20} />
           </motion.div>
           <h3 className="font-semibold mb-1">Phone</h3>
-          <p className="text-sm text-muted">+91 8590464943</p>
+          <p className="text-sm text-muted">{PROFILE.phone}</p>
         </motion.a>
 
         {/* Location */}
@@ -114,7 +115,7 @@ export default function Contact() {
             <MapPin size={20} />
           </motion.div>
           <h3 className="font-semibold mb-1">Location</h3>
-          <p className="text-sm text-muted">Thrissur, Kerala, India</p>
+          <p className="text-sm text-muted">{PROFILE.location}</p>
         </motion.div>
       </motion.div>
 
@@ -130,7 +131,7 @@ export default function Contact() {
         <motion.a
           whileHover={{ y: -4 }}
           whileTap={{ scale: 0.98 }}
-          href="resume.pdf"
+          href={`${import.meta.env.BASE_URL}${RESUME_FILE}`}
           download
           className="btn-primary flex items-center gap-2"
         >
@@ -142,15 +143,15 @@ export default function Contact() {
         <div className="flex items-center gap-6">
           {[
             {
-              href: "https://github.com/Aswinisathyan/veicart",
+              href: PROFILE.github,
               icon: Github,
             },
             {
-              href: "https://linkedin.com/in/aswini-sathyan-c-ab6902337",
+              href: PROFILE.linkedin,
               icon: Linkedin,
             },
             {
-              href: "mailto:sreeaswini3@gmail.com",
+              href: `mailto:${PROFILE.email}`,
               icon: Send,
             },
           ].map(({ href, icon: Icon }) => (

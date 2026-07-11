@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { User, MapPin, Mail, Phone } from "lucide-react";
+import { PROFILE } from "../data/content";
 
 /* ---------------------------------
    Motion presets (same language as Hero)
@@ -43,44 +44,19 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-14 items-center">
         {/* LEFT TEXT — smooth font reveal */}
         <div className="space-y-6">
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-muted leading-relaxed"
-          >
-            A dedicated and analytical Physics graduate, currently pursuing an
-            MCA at Government Engineering College, Thrissur, with a strong
-            foundation in computational problem-solving and programming.
-          </motion.p>
-
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ delay: 0.25 }}
-            className="text-lg md:text-xl text-muted leading-relaxed"
-          >
-            I am actively seeking opportunities in the IT field, where I can
-            contribute to dynamic projects, enhance my technical expertise, and
-            deliver impactful solutions that drive organizational success.
-          </motion.p>
-
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-muted leading-relaxed"
-          >
-            With a commitment to continuous learning and adaptability, I aim to
-            excel in roles that require collaboration, creativity, and a
-            problem-solving mindset.
-          </motion.p>
+          {PROFILE.summary.map((paragraph, index) => (
+            <motion.p
+              key={index}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 + index * 0.15 }}
+              className="text-lg md:text-xl text-muted leading-relaxed"
+            >
+              {paragraph}
+            </motion.p>
+          ))}
         </div>
 
         {/* RIGHT INFO CARDS */}
@@ -88,7 +64,7 @@ export default function About() {
           <InfoCard
             icon={User}
             label="Name"
-            value="Aswini Sathyan C"
+            value={PROFILE.name}
             highlight
             delay={0.1}
           />
@@ -96,7 +72,7 @@ export default function About() {
           <InfoCard
             icon={MapPin}
             label="Location"
-            value="Thrissur, Kerala, India"
+            value={PROFILE.location}
             delay={0.2}
           />
 
@@ -105,10 +81,10 @@ export default function About() {
             label="Email"
             value={
               <a
-                href="mailto:sreeaswini3@gmail.com"
+                href={`mailto:${PROFILE.email}`}
                 className="hover:text-primary transition"
               >
-                sreeaswini3@gmail.com
+                {PROFILE.email}
               </a>
             }
             delay={0.3}
@@ -117,7 +93,7 @@ export default function About() {
           <InfoCard
             icon={Phone}
             label="Phone"
-            value="+91 8590464943"
+            value={PROFILE.phone}
             delay={0.4}
           />
         </div>

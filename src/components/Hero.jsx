@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import { RESUME_FILE } from "../data/content";
 
 export default function Hero() {
   return (
@@ -43,12 +44,12 @@ export default function Hero() {
 
           {/* Resume Button */}
           <a
-            href="/portfolio/Resume_AI_Eng.pdf"
+            href={`${import.meta.env.BASE_URL}${RESUME_FILE}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline"
           >
-            AI Engineer Resume
+            Resume
           </a>
 
         </div>

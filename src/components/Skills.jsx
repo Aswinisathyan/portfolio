@@ -1,40 +1,5 @@
 import { motion } from "framer-motion";
-import { Terminal, Cpu, BarChart3, Settings, Languages } from "lucide-react";
-
-/* Skill groups with corrected icons */
-const skillGroups = [
-  {
-    title: "Programming",
-    icon: Terminal,
-    skills: ["Python", "HTML", "CSS"],
-  },
-  {
-    title: "AI & Machine Learning",
-    icon: Cpu,
-    skills: [
-      "CNN",
-      "YOLOv8",
-      "TensorFlow / Keras",
-      "Model Training",
-      "Image Processing",
-    ],
-  },
-  {
-    title: "Data Science",
-    icon: BarChart3,
-    skills: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "OpenCV"],
-  },
-  {
-    title: "Database & Tools",
-    icon: Settings,
-    skills: ["MySQL", "Git", "GitHub", "LaTeX / Overleaf", "MS Word"],
-  },
-  {
-    title: "Languages",
-    icon: Languages,
-    skills: ["English", "Malayalam"],
-  },
-];
+import { SKILLS as skillGroups } from "../data/content";
 
 /* Motion variants */
 const container = {

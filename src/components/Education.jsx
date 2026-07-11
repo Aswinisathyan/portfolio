@@ -1,37 +1,6 @@
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
-
-/* ---------------------------------
-   Education Data
----------------------------------- */
-
-const education = [
-  {
-    degree: "MCA (Master of Computer Applications)",
-    institution: "Government Engineering College, Thrissur",
-    location: "Thrissur, India",
-    period: "2024 – Present",
-    current: true,
-  },
-  {
-    degree: "BSc Physics",
-    institution: "Sreekrishna College, Guruvayur",
-    location: "Guruvayur, India",
-    period: "2021 – 2024",
-  },
-  {
-    degree: "Higher Secondary (10+2)",
-    institution: "Govt Model Girls Higher Secondary School",
-    location: "Kunnamkulam, India",
-    period: "2019 – 2021",
-  },
-  {
-    degree: "Secondary (10th)",
-    institution: "Bethany Convent Girls High School",
-    location: "Kunnamkulam, India",
-    period: "2019",
-  },
-];
+import { EDUCATION as education } from "../data/content";
 
 /* ---------------------------------
    Motion Variants (Hero Language)
@@ -167,6 +136,12 @@ export default function Education() {
                   <p className="text-sm text-muted mt-2">
                     {itemData.period}
                   </p>
+
+                  {itemData.cgpa && (
+                    <p className="text-sm text-muted">
+                      CGPA: {itemData.cgpa}
+                    </p>
+                  )}
                 </motion.div>
               </div>
             </motion.div>

@@ -1,26 +1,6 @@
 import { motion } from "framer-motion";
-import { Zap, ShoppingCart, ExternalLink } from "lucide-react";
-
-const projects = [
-  {
-    title: "Lightning Hotspot Identification",
-    description:
-      "Analyzed satellite-based lightning data to identify global lightning hotspots, with a focus on the Congo region. Explored the relationship between lightning activity and atmospheric parameters like CAPE and K-Index.",
-    tech: ["Python", "NASA Data", "ERA5", "Data Analysis"],
-    icon: Zap,
-    gradient: "from-yellow-400 to-orange-500",
-    link: null,
-  },
-  {
-    title: "Green VEICART",
-    description:
-      "AI-based smart checkout system using YOLOv8 and IoT (ESP32 + HX711) for automated product detection, weight-based billing, and QR-code digital payments.",
-    tech: ["YOLOv8", "ESP32", "IoT", "Python", "AI"],
-    icon: ShoppingCart,
-    gradient: "from-green-400 to-emerald-500",
-    link: "https://github.com/Aswinisathyan/veicart",
-  },
-];
+import { ExternalLink } from "lucide-react";
+import { PROJECTS as projects } from "../data/content";
 
 export default function Projects() {
   return (
@@ -39,7 +19,7 @@ export default function Projects() {
         Featured Projects
       </motion.h2>
 
-      <div className="grid md:grid-cols-2 gap-10 items-stretch">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
         {projects.map((project, index) => {
           const Icon = project.icon;
           const Wrapper = project.link ? "a" : "div";

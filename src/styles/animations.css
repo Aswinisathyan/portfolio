@@ -37,60 +37,20 @@
 }
 
 /* ===============================
-   FLOATING GLOW BLOBS
-================================ */
-
-.animate-float-slow {
-  animation: floatSlow 10s ease-in-out infinite;
-}
-
-.animate-float-slower {
-  animation: floatSlow 14s ease-in-out infinite;
-}
-
-@keyframes floatSlow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-40px);
-  }
-}
-
-/* ===============================
-   GRADIENT SHIMMER (NAME TEXT)
-================================ */
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradientMove 6s ease infinite;
-}
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* ===============================
-   DOWN ARROW BOUNCE
+   SCROLL-CUE (down arrow)
 ================================ */
 
 .animate-bounce-soft {
-  animation: bounceSoft 2.2s ease-in-out infinite;
+  animation: bounceSoft 2.4s ease-in-out infinite;
 }
 
 @keyframes bounceSoft {
   0%, 100% {
     transform: translateY(0);
+    opacity: 0.6;
   }
   50% {
-    transform: translateY(12px);
+    transform: translateY(6px);
+    opacity: 1;
   }
 }

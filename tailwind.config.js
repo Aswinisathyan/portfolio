@@ -5,29 +5,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#070b16",        // deeper Lovable blue
-        card: "rgba(255,255,255,0.05)",
-        border: "rgba(255,255,255,0.12)",
-        primary: "#22d3ee",           // cyan
-        accent: "#38bdf8",            // soft glow
+        background: "#0a0a0f",        // near-black, cool tint
+        card: "rgba(255,255,255,0.03)",
+        border: "rgba(255,255,255,0.08)",
+        primary: "#6366f1",           // indigo — single accent
+        accent: "#818cf8",            // lighter indigo, for gradients/secondary use
         muted: "#94a3b8",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-      },
-      animation: {
-        float: "float 6s ease-in-out infinite",
-        fadeUp: "fadeUp 0.8s ease-out forwards",
-      },
-      keyframes: {
-        float: {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-18px)" },
-        },
-        fadeUp: {
-          "0%": { opacity: 0, transform: "translateY(20px)" },
-          "100%": { opacity: 1, transform: "translateY(0)" },
-        },
       },
     },
   },

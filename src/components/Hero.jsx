@@ -4,11 +4,15 @@ import { RESUME_FILE } from "../data/content";
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Soft glowing background blobs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[28rem] h-[28rem] bg-primary/15 blur-[140px] rounded-full animate-float-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-[22rem] h-[22rem] bg-accent/15 blur-[120px] rounded-full animate-float-slower" />
-      </div>
+      {/* Subtle grid backdrop with center spotlight */}
+      <div className="absolute inset-0 pointer-events-none bg-grid" />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,102,241,0.12), transparent 70%)",
+        }}
+      />
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl px-6">
@@ -20,7 +24,7 @@ export default function Hero() {
         {/* Name */}
         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-up delay-200">
           <span className="text-white">Aswini </span>
-          <span className="bg-gradient-to-r from-cyan-400 to-sky-500 bg-clip-text text-transparent animate-gradient">
+          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Sathyan C
           </span>
         </h1>

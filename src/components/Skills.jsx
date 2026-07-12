@@ -52,28 +52,19 @@ export default function Skills() {
             <motion.div
               key={group.title}
               variants={card}
-              whileHover={{ y: -6 }}
+              whileHover={{ y: -4 }}
               whileTap={{ scale: 0.98 }}
               className="glass-card p-6
                          transition-all duration-300
                          hover:border-primary/50
                          group relative overflow-hidden"
             >
-              {/* shimmer sweep */}
-              <span
-                className="absolute inset-0 bg-gradient-to-r
-                           from-transparent via-white/10 to-transparent
-                           translate-x-[-120%]
-                           group-hover:translate-x-[120%]
-                           transition-transform duration-700"
-              />
-
               {/* Header */}
               <div className="flex items-center gap-3 mb-4 relative z-10">
                 <motion.div
-                  whileHover={{ scale: 1.15, rotate: 6 }}
+                  whileHover={{ scale: 1.08 }}
                   transition={{ type: "spring", stiffness: 260 }}
-                  className="icon-pill shadow-[0_0_20px_rgba(56,189,248,0.35)]"
+                  className="icon-pill"
                 >
                   <Icon size={18} />
                 </motion.div>

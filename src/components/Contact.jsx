@@ -69,14 +69,14 @@ export default function Contact() {
         {/* Email */}
         <motion.a
           variants={fadeUp}
-          whileHover={{ y: -6 }}
+          whileHover={{ y: -4 }}
           whileTap={{ scale: 0.98 }}
           href={`mailto:${PROFILE.email}`}
           className="glass-card p-6 text-center hover:border-primary/40 transition-all"
         >
           <motion.div
-            whileHover={{ scale: 1.15 }}
-            className="icon-pill mx-auto mb-4 shadow-[0_0_20px_rgba(56,189,248,0.35)]"
+            whileHover={{ scale: 1.08 }}
+            className="icon-pill mx-auto mb-4"
           >
             <Mail size={20} />
           </motion.div>
@@ -87,14 +87,14 @@ export default function Contact() {
         {/* Phone */}
         <motion.a
           variants={fadeUp}
-          whileHover={{ y: -6 }}
+          whileHover={{ y: -4 }}
           whileTap={{ scale: 0.98 }}
           href={`tel:${PROFILE.phone.replace(/\s+/g, "")}`}
           className="glass-card p-6 text-center hover:border-primary/40 transition-all"
         >
           <motion.div
-            whileHover={{ scale: 1.15 }}
-            className="icon-pill mx-auto mb-4 shadow-[0_0_20px_rgba(56,189,248,0.35)]"
+            whileHover={{ scale: 1.08 }}
+            className="icon-pill mx-auto mb-4"
           >
             <Phone size={20} />
           </motion.div>
@@ -105,12 +105,12 @@ export default function Contact() {
         {/* Location */}
         <motion.div
           variants={fadeUp}
-          whileHover={{ y: -6 }}
+          whileHover={{ y: -4 }}
           className="glass-card p-6 text-center"
         >
           <motion.div
-            whileHover={{ scale: 1.15 }}
-            className="icon-pill mx-auto mb-4 shadow-[0_0_20px_rgba(56,189,248,0.35)]"
+            whileHover={{ scale: 1.08 }}
+            className="icon-pill mx-auto mb-4"
           >
             <MapPin size={20} />
           </motion.div>

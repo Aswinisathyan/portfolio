@@ -66,8 +66,8 @@ export default function Education() {
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, type: "spring" }}
                 className="absolute left-1/2 -translate-x-1/2
-                           w-4 h-4 rounded-full bg-cyan-400
-                           shadow-[0_0_24px_rgba(34,211,238,0.7)]"
+                           w-3.5 h-3.5 rounded-full bg-primary
+                           ring-4 ring-background"
               />
 
               {/* spacer */}
@@ -80,23 +80,14 @@ export default function Education() {
                 }`}
               >
                 <motion.div
-                  whileHover={{ y: -6 }}
+                  whileHover={{ y: -4 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 260 }}
                   className="glass-card p-7 relative overflow-hidden"
                 >
-                  {/* shimmer */}
-                  <span
-                    className="absolute inset-0 bg-gradient-to-r
-                               from-transparent via-white/10 to-transparent
-                               translate-x-[-120%]
-                               hover:translate-x-[120%]
-                               transition-transform duration-700"
-                  />
-
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
-                      whileHover={{ rotate: 6, scale: 1.15 }}
+                      whileHover={{ scale: 1.08 }}
                       className="icon-pill"
                     >
                       <GraduationCap size={18} />
@@ -104,7 +95,7 @@ export default function Education() {
 
                     {itemData.current && (
                       <span className="text-xs px-2 py-0.5 rounded-full
-                                       bg-cyan-400/20 text-cyan-400">
+                                       bg-primary/15 text-primary">
                         Current
                       </span>
                     )}
@@ -124,7 +115,7 @@ export default function Education() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.25 }}
-                    className="text-cyan-400 font-medium"
+                    className="text-primary font-medium"
                   >
                     {itemData.institution}
                   </motion.p>

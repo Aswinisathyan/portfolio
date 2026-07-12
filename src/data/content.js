@@ -42,7 +42,7 @@ export const EDUCATION = [
     degree: "MCA (Master of Computer Applications)",
     institution: "Government Engineering College, Thrissur",
     location: "Thrissur, India",
-    period: "2024 – Present",
+    period: "2024 – 2026",
     cgpa: "8.49",
     current: true,
   },
@@ -74,7 +74,6 @@ export const PROJECTS = [
       "Analyzed satellite-based lightning data to identify global lightning hotspots, with a focus on the Congo region. Explored the relationship between lightning activity and atmospheric parameters like CAPE and K-Index.",
     tech: ["Python", "NASA Data", "ERA5", "Data Analysis"],
     icon: Zap,
-    gradient: "from-yellow-400 to-orange-500",
     link: null,
   },
   {
@@ -83,7 +82,6 @@ export const PROJECTS = [
       "AI-based smart checkout system using YOLOv8 and IoT (ESP32 + HX711) for automated product detection, weight-based billing, and QR-code digital payments.",
     tech: ["YOLOv8", "ESP32", "IoT", "Python", "AI"],
     icon: ShoppingCart,
-    gradient: "from-green-400 to-emerald-500",
     link: "https://github.com/Aswinisathyan/veicart",
   },
   {
@@ -92,7 +90,6 @@ export const PROJECTS = [
       "An AI-driven medical lab booking and notification system integrated with WhatsApp Cloud API, using machine learning for intent detection, rule-based booking automation, and an NLP engine.",
     tech: ["Python", "WhatsApp Cloud API", "NLP", "Machine Learning"],
     icon: Stethoscope,
-    gradient: "from-sky-400 to-blue-500",
     link: "https://github.com/Aswinisathyan/ai-medical-booking-assistant",
   },
 ];

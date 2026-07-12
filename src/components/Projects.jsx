@@ -37,22 +37,6 @@ export default function Projects() {
               }}
               className="group relative h-full"
             >
-              {/* ambient glow */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${project.gradient}
-                            opacity-0 group-hover:opacity-15
-                            blur-3xl transition duration-500`}
-              />
-
-              {/* shimmer sweep */}
-              <span
-                className="absolute inset-0 bg-gradient-to-r
-                           from-transparent via-white/10 to-transparent
-                           translate-x-[-120%]
-                           group-hover:translate-x-[120%]
-                           transition-transform duration-700"
-              />
-
               <Wrapper
                 href={project.link || undefined}
                 target={project.link ? "_blank" : undefined}
@@ -60,7 +44,7 @@ export default function Projects() {
                 className="block h-full"
               >
                 <motion.div
-                  whileHover={{ y: -6 }}
+                  whileHover={{ y: -4 }}
                   transition={{ type: "spring", stiffness: 260 }}
                   className={`relative glass-card p-8 h-full flex flex-col ${
                     project.link ? "cursor-pointer" : ""
@@ -69,14 +53,11 @@ export default function Projects() {
                   {/* icon */}
                   <div className="flex items-start justify-between mb-6">
                     <motion.div
-                      whileHover={{ rotate: 6, scale: 1.1 }}
+                      whileHover={{ scale: 1.06 }}
                       transition={{ type: "spring", stiffness: 300 }}
-                      className={`w-12 h-12 rounded-xl
-                                  bg-gradient-to-br ${project.gradient}
-                                  flex items-center justify-center
-                                  shadow-lg`}
+                      className="icon-pill"
                     >
-                      <Icon className="text-black" size={22} />
+                      <Icon size={20} />
                     </motion.div>
 
                     {project.link && (

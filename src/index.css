@@ -16,7 +16,18 @@ html {
 }
 
 body {
-  @apply bg-[#070b16] text-slate-100 font-sans antialiased;
+  @apply bg-background text-slate-100 font-sans antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* =====================================================
@@ -52,25 +63,22 @@ p {
 }
 
 .section-title {
-  @apply text-3xl md:text-4xl font-semibold text-cyan-400 mb-14;
+  @apply text-3xl md:text-4xl font-semibold text-primary mb-14;
 }
 
 /* =====================================================
-   GLASS / LUCID CARDS (Lovable)
+   CARDS — flat, hairline border, minimal motion
    ===================================================== */
 
 .card,
 .glass-card {
-  @apply rounded-2xl border border-white/10
-         bg-white/5 backdrop-blur-xl
-         transition-all duration-300;
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
-    0 20px 40px rgba(0, 0, 0, 0.4);
+  @apply rounded-xl border border-border
+         bg-card
+         transition-colors duration-300;
 }
 
 .glass-card:hover {
-  @apply border-cyan-400/40;
+  @apply border-primary/40;
 }
 
 /* =====================================================
@@ -78,30 +86,30 @@ p {
    ===================================================== */
 
 .icon-pill {
-  @apply w-11 h-11 rounded-xl
-         bg-cyan-400/20 text-cyan-400
+  @apply w-11 h-11 rounded-lg
+         bg-primary/10 text-primary
          flex items-center justify-center;
 }
 
 /* =====================================================
-   BUTTONS (Lovable style)
+   BUTTONS
    ===================================================== */
 
 .btn-primary {
-  @apply px-7 py-3 rounded-full
-         bg-cyan-400 text-black
+  @apply px-6 py-3 rounded-lg
+         bg-primary text-white
          font-medium tracking-wide
-         hover:bg-cyan-300
-         transition;
+         hover:bg-primary/90
+         transition-colors;
 }
 
 .btn-outline {
-  @apply px-7 py-3 rounded-full
-         border border-white/20
+  @apply px-6 py-3 rounded-lg
+         border border-border
          text-slate-200
-         hover:border-cyan-400
-         hover:text-cyan-400
-         transition;
+         hover:border-primary/60
+         hover:text-primary
+         transition-colors;
 }
 
 /* =====================================================
@@ -121,7 +129,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(56, 189, 248, 0.4);
+  background: rgba(99, 102, 241, 0.4);
   border-radius: 999px;
 }
 
@@ -130,6 +138,18 @@ a {
    ===================================================== */
 
 ::selection {
-  background: rgba(56, 189, 248, 0.35);
+  background: rgba(99, 102, 241, 0.35);
   color: #020617;
+}
+
+/* =====================================================
+   SUBTLE GRID BACKDROP (hero)
+   ===================================================== */
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 100%);
 }

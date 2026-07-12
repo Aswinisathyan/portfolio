@@ -114,26 +114,17 @@ function InfoCard({ icon: Icon, label, value, delay, highlight }) {
       whileInView="visible"
       viewport={{ once: true }}
       transition={{ delay }}
-      whileHover={{ y: -6 }}
-      whileTap={{ scale: 0.98 }}   /* mobile-safe interaction */
+      whileHover={{ y: -4 }}
+      whileTap={{ scale: 0.98 }}
       className="glass-card flex items-center gap-4 p-6
                  hover:border-primary/50
                  transition-all duration-300
                  group relative overflow-hidden"
     >
-      {/* shimmer sweep */}
-      <span
-        className="absolute inset-0 bg-gradient-to-r
-                   from-transparent via-white/10 to-transparent
-                   translate-x-[-120%]
-                   group-hover:translate-x-[120%]
-                   transition-transform duration-700"
-      />
-
-      {/* Icon — subtle lift / pulse */}
+      {/* Icon */}
       <motion.div
-        whileHover={{ scale: 1.15, rotate: 3 }}
-        whileTap={{ scale: 1.05 }}
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300 }}
         className="icon-pill"
       >
